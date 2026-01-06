@@ -1,0 +1,36 @@
+{
+  "clients": [
+    { "id": 1, "name": "Customer 1", "status": "Active" },
+    { "id": 2, "name": "Customer 2", "status": "Active" }
+  ],
+  "pets": [
+    {
+      "id": 101,
+      "clientId": 1,
+      "name": "Dog 1",
+      "status": "Active",
+      "type": "Dog",
+      "breed": "American Staffordshire Terrier",
+      "size": "Medium",
+      "temper": "Excellent",
+      "color": "Black & White",
+      "gender": "Neutered - Male",
+      "weightKg": 4.0,
+      "dob": "2025-07-29",
+      "attributes": ["Barks", "Blind", "Escaper"],
+      "notes": null,
+      "customerNotes": "This is simple notes from portal",
+      "photos": ["/seed/dog1.png"]
+    }
+  ],
+  "vaccinations": [
+    { "id": 5001, "petId": 101, "vaccine": "Rabies", "date": "2025-08-01", "due": "2026-08-01" }
+  ],
+  "grooming": [
+    { "id": 7001, "petId": 101, "service": "Full Groom", "date": "2025-08-05", "notes": "Calm" }
+  ],
+  "bookings": [
+    { "id": 8001, "petId": 101, "type": "Boarding", "start": "2025-08-20", "end": "2025-08-25", "status": "Confirmed" }
+  ]
+}
+
