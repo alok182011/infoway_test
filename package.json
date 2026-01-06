@@ -11,8 +11,10 @@
     "server": "json-server --watch data/db.json --port 4000"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-redux": "^9.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
