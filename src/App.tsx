@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react';
+import { useAppDispatch, useAppSelector } from './store/hooks';
+import { loadClients, loadPets, loadVaccinations, loadGrooming, loadBookings } from './store/slices';
+import ClientList from './components/ClientList';
+import PetDrawer from './components/PetDrawer';
+import type { Pet } from './types';
+import styles from './App.module.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useAppDispatch();
+  const pets = useAppSelector(state => state.pets.pets);
+  const [selectedPetId, setSelectedPetId] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Load all data on app mount
+    dispatch(loadClients());
+    dispatch(loadPets());
+    dispatch(loadVaccinations());
+    dispatch(loadGrooming());
+    dispatch(loadBookings());
+  }, [dispatch]);
+
+  // Get the selected pet from Redux store to ensure it's always up-to-date
+  const selectedPet = selectedPetId ? pets.find(p => p.id === selectedPetId) || null : null;
+
+  const handlePetSelect = (pet: Pet) => {
+    setSelectedPetId(pet.id);
+  };
+
+  const handleCloseDrawer = () => {
+    setSelectedPetId(null);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className={styles.app}>
+      <ClientList selectedPetId={selectedPetId} onPetSelect={handlePetSelect} />
+      <PetDrawer pet={selectedPet} onClose={handleCloseDrawer} />
+    </div>
+  );
 }
 
-export default App
+export default App;

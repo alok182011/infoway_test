@@ -1,7 +1,20 @@
 {
   "clients": [
-    { "id": 1, "name": "Customer 1", "status": "Active" },
-    { "id": 2, "name": "Customer 2", "status": "Active" }
+    {
+      "id": 1,
+      "name": "Customer 1",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "name": "Customer 2",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "name": "Customer 3",
+      "status": "Inactive"
+    }
   ],
   "pets": [
     {
@@ -15,22 +28,99 @@
       "temper": "Excellent",
       "color": "Black & White",
       "gender": "Neutered - Male",
-      "weightKg": 4.0,
+      "weightKg": 1.52,
       "dob": "2025-07-29",
-      "attributes": ["Barks", "Blind", "Escaper"],
+      "attributes": [
+        "Barks",
+        "Blind",
+        "Escaper"
+      ],
       "notes": null,
       "customerNotes": "This is simple notes from portal",
-      "photos": ["/seed/dog1.png"]
+      "photos": [
+        "/seed/dog1.png"
+      ]
+    },
+    {
+      "id": 102,
+      "clientId": 2,
+      "name": "Luna",
+      "status": "Active",
+      "type": "Dog",
+      "breed": "Golden Retriever",
+      "size": "Large",
+      "temper": "Friendly",
+      "color": "Golden",
+      "gender": "Spayed - Female",
+      "weightKg": 28.5,
+      "dob": "2023-03-15",
+      "attributes": [
+        "Good with kids",
+        "Loves water"
+      ],
+      "notes": "Very energetic, needs daily exercise",
+      "customerNotes": "Luna is a sweetheart and loves playing fetch",
+      "photos": [
+        "/seed/dog2.png"
+      ]
+    },
+    {
+      "id": 103,
+      "clientId": 1,
+      "name": "Max",
+      "status": "Active",
+      "type": "Dog",
+      "breed": "French Bulldog",
+      "size": "Small",
+      "temper": "Calm",
+      "color": "Brindle",
+      "gender": "Neutered - Male",
+      "weightKg": 11.2,
+      "dob": "2024-01-10",
+      "attributes": [
+        "Apartment friendly",
+        "Low energy"
+      ],
+      "notes": "Requires special attention due to breathing issues",
+      "customerNotes": "Max is a gentle companion, perfect for indoor living",
+      "photos": [
+        "/seed/dog3.png"
+      ]
     }
   ],
   "vaccinations": [
-    { "id": 5001, "petId": 101, "vaccine": "Rabies", "date": "2025-08-01", "due": "2026-08-01" }
+    {
+      "id": 5001,
+      "petId": 101,
+      "vaccine": "Rabies",
+      "date": "2025-08-01",
+      "due": "2026-08-01"
+    },
+    {
+      "petId": 101,
+      "vaccine": "Tika",
+      "date": "2026-01-07",
+      "due": "2026-01-09",
+      "id": 5002
+    }
   ],
   "grooming": [
-    { "id": 7001, "petId": 101, "service": "Full Groom", "date": "2025-08-05", "notes": "Calm" }
+    {
+      "id": 7001,
+      "petId": 101,
+      "service": "Full Groom",
+      "date": "2025-08-05",
+      "notes": "Calm"
+    }
   ],
   "bookings": [
-    { "id": 8001, "petId": 101, "type": "Boarding", "start": "2025-08-20", "end": "2025-08-25", "status": "Confirmed" }
+    {
+      "id": 8001,
+      "petId": 101,
+      "type": "Boarding",
+      "start": "2025-08-20",
+      "end": "2025-08-25",
+      "status": "Confirmed"
+    }
   ]
 }
-

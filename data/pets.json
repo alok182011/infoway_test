@@ -16,6 +16,42 @@
     "notes": null,
     "customerNotes": "This is simple notes from portal",
     "photos": ["/seed/dog1.png"]
+  },
+  {
+    "id": 102,
+    "clientId": 2,
+    "name": "Luna",
+    "status": "Active",
+    "type": "Dog",
+    "breed": "Golden Retriever",
+    "size": "Large",
+    "temper": "Friendly",
+    "color": "Golden",
+    "gender": "Spayed - Female",
+    "weightKg": 28.5,
+    "dob": "2023-03-15",
+    "attributes": ["Good with kids", "Loves water"],
+    "notes": "Very energetic, needs daily exercise",
+    "customerNotes": "Luna is a sweetheart and loves playing fetch",
+    "photos": ["/seed/dog2.png"]
+  },
+  {
+    "id": 103,
+    "clientId": 1,
+    "name": "Max",
+    "status": "Active",
+    "type": "Dog",
+    "breed": "French Bulldog",
+    "size": "Small",
+    "temper": "Calm",
+    "color": "Brindle",
+    "gender": "Neutered - Male",
+    "weightKg": 11.2,
+    "dob": "2024-01-10",
+    "attributes": ["Apartment friendly", "Low energy"],
+    "notes": "Requires special attention due to breathing issues",
+    "customerNotes": "Max is a gentle companion, perfect for indoor living",
+    "photos": ["/seed/dog3.png"]
   }
 ]
 
