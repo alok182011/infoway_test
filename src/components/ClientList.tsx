@@ -62,8 +62,8 @@ export default function ClientList({ selectedPetId, onPetSelect }: ClientListPro
 
   const getAvatarColor = (clientId: number) => {
     const colors = [
-      'linear-gradient(135deg, #8B4513 0%, #A0522D 100%)', // Brownish for Customer 1
-      'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)', // Green for Customer 2
+      'linear-gradient(135deg, #8B4513 0%, #A0522D 100%)',
+      'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)', 
     ];
     return colors[(clientId - 1) % colors.length];
   };
@@ -76,7 +76,6 @@ export default function ClientList({ selectedPetId, onPetSelect }: ClientListPro
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.title}>Pets</h2>
-        <button className={styles.petsButton}>Pets</button>
       </div>
       
       <div className={styles.searchSection}>

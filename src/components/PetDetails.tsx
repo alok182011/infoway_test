@@ -223,12 +223,12 @@ export default function PetDetails({ pet: petProp, isEditing: externalIsEditing,
           <span className={styles.label}>Attributes:</span>
           {isEditing ? (
             <AttributeMultiSelect
-              value={editedPet.attributes}
+              value={editedPet.attributes || []}
               onChange={(value) => handleChange('attributes', value)}
             />
           ) : (
             <div className={styles.attributesContainer}>
-              {pet.attributes.length > 0 ? (
+              {pet.attributes && pet.attributes.length > 0 ? (
                 pet.attributes.map((attr, index) => (
                   <span key={index} className={styles.attributeChip}>
                     {attr}

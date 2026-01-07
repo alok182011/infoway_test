@@ -2,7 +2,7 @@ import { useState, useMemo } from 'react';
 import { useAppSelector } from '../store/hooks';
 import { makeSelectPetGrooming } from '../store/selectors';
 import type { Pet } from '../types';
-import LoadingSkeleton, { TableRowSkeleton } from './LoadingSkeleton';
+import { TableRowSkeleton } from './LoadingSkeleton';
 import styles from './Grooming.module.css';
 
 interface GroomingProps {
